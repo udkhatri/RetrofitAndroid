@@ -1,9 +1,11 @@
 package com.example.uday.retrofit
 
 import retrofit2.Response
+import retrofit2.http.GET
 
 interface TodoApi {
 
-    fun getTodos(): Response<List<Todo>>
+    @GET("/todos")
+    suspend fun getTodos(): Response<List<Todo>>
 
 }
